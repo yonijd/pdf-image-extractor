@@ -1,0 +1,23 @@
+# Carpetas de imágenes extraídas
+/img/
+*.pdf
+*.PDF
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
