@@ -29,7 +29,12 @@ def extract_images_filter_by_size_or_weight(pdf_path, output_dir, filter_type, f
     filter_type: 'size' o 'weight'
     filter_value: valor del filtro (px o KB)
     """
-    doc = fitz.open(pdf_path)
+    try:
+        doc = fitz.open(pdf_path)
+    except Exception:
+        print(f"ERROR: No se pudo abrir '{pdf_path}'. ¿Seguro que es un PDF válido?")
+        return []
+    
     saved_images = []
     
     # Mostrar tipo de filtro
